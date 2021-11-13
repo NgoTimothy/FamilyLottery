@@ -1,0 +1,40 @@
+{
+  "name": "react-webpack-typescript-babel",
+  "version": "1.0.0",
+  "description": "A sample setup using React, Webpack and Babel to build TypeScript code, and using TypeScript for type-checking.",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "webpack --progress --mode=production",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && webpack s --config ./webpack.config.js --mode=development",
+    "start:prod": "npm run build && http-server dist -p 9999 -o",
+    "prod": "set NODE_OPTIONS=--openssl-legacy-provider && npm run build && http-server dist -p 9999 -o"
+  },
+  "author": {
+    "name": "Timothy Ngo",
+    "email": "timothy350681@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.15.8",
+    "@babel/plugin-proposal-class-properties": "7.14.5",
+    "@babel/plugin-proposal-object-rest-spread": "7.15.6",
+    "@babel/preset-env": "7.15.8",
+    "@babel/preset-react": "7.14.5",
+    "@babel/preset-typescript": "7.15.0",
+    "babel-loader": "8.2.3",
+    "fork-ts-checker-webpack-plugin": "6.4.0",
+    "html-webpack-plugin": "5.5.0",
+    "http-server": "14.0.0",
+    "typescript": "4.4.4",
+    "webpack": "5.60.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "4.4.0"
+  },
+  "dependencies": {
+    "@types/react": "17.0.33",
+    "@types/react-dom": "17.0.10",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  }
+}
