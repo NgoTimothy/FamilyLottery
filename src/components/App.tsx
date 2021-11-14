@@ -1,10 +1,13 @@
 import React from 'react';
-import { Counter } from './Counter';
-import { Hello } from './Hello';
+// import { Counter } from './Counter';
+import { Dice } from './Dice';
+// import { Roller } from './Roller';
 
 export const App = () => (
   <>
-    <Hello name={ 'react-webpack-typescript-babel' } />
-    <Counter />
+    {/* <Roller/>
+    <Counter /> */}
+    <Dice
+      size={3}/>
   </>
 );
